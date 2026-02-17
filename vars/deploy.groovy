@@ -1,4 +1,4 @@
-def call(String project, String tag, String user, String port) {
+def call() {
 
     sh """
         docker compose down || true
