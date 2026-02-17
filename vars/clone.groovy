@@ -1,4 +1,6 @@
-def call(String url, String branch){
-  deleteDir()
-  git url: "${url}", branch: "${branch}"
+def call(String repoUrl, String branch) {
+
+    sh """
+        git clone -b ${branch} ${repoUrl} .
+    """
 }
